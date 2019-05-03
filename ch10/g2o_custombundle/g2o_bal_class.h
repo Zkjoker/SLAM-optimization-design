@@ -8,7 +8,7 @@
 #include "common/projection.h"
 
 //定义相机位姿顶点类，由于相机内参也作为优化变量，所以包含了：
-//焦距f，畸变系数k1 k2， 3个参数的平移，3个参数的旋转。一共九个量，9维，类型为Eigen::VectorXd
+//此处可能是三个外参（f，cx，cy），应该不是三个畸变系数。 另外还有3个参数的平移，3个参数的旋转。一共九个量，9维，类型为Eigen::VectorXd
 class VertexCameraBAL : public g2o::BaseVertex<9,Eigen::VectorXd>
 {
 public:
